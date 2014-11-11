@@ -1,24 +1,35 @@
 class Solution:
+	def __init__(self):
+		self.re = 0
+
 	def main(self):
+		
+		return self.re
 
-		return re
 
+fo = open("input", "r")
+lines = fo.read().splitlines()
+fo.close()
+T = int(lines[0])
 
 ous = ""
-fo = open("input", "r")
-ins = fo.read()
-ins = ins.splitlines()
-fo.close()
-Case_num = int(ins[0])
-i = 1
-for cn in range(Case_num):
+index = 1
+for caseNum in range(T):
+	N = int(lines[index])
+	index +=1
 
+	ins = lines[index:index+N]
+	# print ins,'\n-----'
+	index += N
 	
-	ous +="Case #"+str(cn+1)+": "
-	s = Solution()
-	ous += str(s.main())
-	ous += '\n'
+	# for i in ins:
+	# 	print i
 	
-fo = open("output", "w")
+	# ous +="Case #"+str(caseNum+1)+": "
+	# s = Solution()
+	# ous += str(s.main())
+	# ous += '\n'
+	
+fo = open("-small.out", "w")
 fo.write(ous)
 fo.close()
